@@ -1,0 +1,23 @@
+.container{
+    max-width: 70rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.header{
+    background: #FFFFFF;
+    padding: 35px 0;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.header_nav{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.loading_block{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
