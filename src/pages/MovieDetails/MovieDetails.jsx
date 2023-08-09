@@ -39,11 +39,6 @@ export default function MovieDetails() {
       </div>
     );
   }
-
-  if (status === 'rejected') {
-    return <p>{error}</p>;
-  }
-
   if (status === 'resolved') {
     return (
       <div className={css.movie_details_container}>
@@ -110,5 +105,8 @@ export default function MovieDetails() {
         </Suspense>
       </div>
     );
+  }
+  if (status === 'rejected') {
+    return <p className={css.error_text}>{error}</p>;
   }
 }

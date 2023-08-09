@@ -65,6 +65,6 @@ export default function MovieList({ movieQuery }) {
     );
   }
   if (status === 'rejected') {
-    return <p>{error}</p>;
+    return <p className={css.error_text}>{error}</p>;
   }
 }

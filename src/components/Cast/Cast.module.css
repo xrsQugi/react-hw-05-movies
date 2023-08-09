@@ -47,3 +47,14 @@
     transition: all .1s ease-in-out;
     margin: 0;
 }
+
+.error_text{
+    color: #171717;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    transition: all .1s ease-in-out;
+    margin: 0;
+}

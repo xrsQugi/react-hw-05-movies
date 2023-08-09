@@ -113,3 +113,14 @@
     display: flex;
     justify-content: center;
 }
+
+.error_text{
+    color: #171717;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    transition: all .1s ease-in-out;
+    margin: 0;
+}
