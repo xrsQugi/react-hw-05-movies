@@ -1,4 +1,5 @@
-.loading_block{
+/*! ---- before adding photo ---- */
+/* .loading_block{
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -38,4 +39,77 @@
 .nav_link:hover{
     background-color: #F24D4D;
     color: #FFFFFF;
+} */
+
+/*! ---- after adding photo ---- */
+
+.loading_block{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.home_title{
+    text-align: center;
+    color: #171717;
+    font-family: Inter;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.movie_list{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.nav_link{
+    width: 220px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    align-items: center;
+    border: 1px #171717 solid;
+    border-radius: 10px;
+    transition: all .25s ease-in-out;
+}
+
+.movie_img{
+    display: block;
+    padding: 0;
+    margin: 0;
+    height: 330px;
+    width: 100%;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+}
+
+.movie_block_title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.movie_title{
+    color: #171717;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    transition: all .1s ease-in-out;
+    margin: 0;
+}
+
+.nav_link:hover{
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    transform: scale(1.03);
 }

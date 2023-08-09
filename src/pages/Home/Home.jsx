@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import fetchInfo from '../../API';
 import css from './Home.module.css';
-import Loader from '../../components/Loader/Loader'
+import Loader from '../../components/Loader/Loader';
+import defImg from '../../components/DefaultImg/DefaultImg'
 
 export default function Home() {
   const [movies, setMovies] = useState([]);
@@ -13,9 +14,7 @@ export default function Home() {
   const getMovies = async () => {
     setStatus('pending');
     try {
-      const response = await fetchInfo(
-        '/trending/movie/day?'
-      );
+      const response = await fetchInfo('/trending/all/day?');
       setMovies(response.results);
       setStatus('resolved');
       setError(false);
@@ -49,7 +48,19 @@ export default function Home() {
                 to={`movies/${movie.id}`}
                 state={{ from: location }}
               >
-                {movie.title || movie.name}
+                <img
+                  src={
+                    movie.poster_path
+                      ? `https://image.tmdb.org/t/p/w500${movie.poster_path}`
+                      : defImg
+                  }
+                  alt="poster of cinema"
+                  id={movie.id}
+                  className={css.movie_img}
+                />
+                <div className={css.movie_block_title}>
+                  <p className={css.movie_title}>{movie.title || movie.name}</p>
+                </div>
               </NavLink>
             </li>
           ))}
