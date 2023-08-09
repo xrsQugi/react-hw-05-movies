@@ -25,6 +25,7 @@ export default function SearchBar({ onSubmit }) {
           )
         }
         required
+        autoFocus
         className={css.input}
       />
       <button type="submit" className={css.btn_submit}><BsSearch></BsSearch></button>
