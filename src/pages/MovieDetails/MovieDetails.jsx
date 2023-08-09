@@ -46,13 +46,13 @@ export default function MovieDetails() {
 
   if (status === 'resolved') {
     return (
-      <main className="movieDetailsContainer">
-        <NavLink className={css.goBackBtn} to={goBackToMovies}>
+      <div className={css.movie_details_container}>
+        <NavLink className={css.btn_back} to={goBackToMovies}>
           <BsReply></BsReply>
           <span>Go back</span>
         </NavLink>
-        <div className={css.movieDetails}>
-          <div className={css.posterBox}>
+        <div className={css.movie_details_info}>
+          <div className={css.poster_container}>
             <img
               className={css.poster}
               src={
@@ -63,9 +63,9 @@ export default function MovieDetails() {
               alt=""
             />
           </div>
-          <div className={css.movieInfo}>
-            <h2 className={css.movieTitle}>{movie.title || movie.name}</h2>
-            <p className={css.score}>
+          <div className={css.movie_info}>
+            <h2 className={css.movie_title}>{movie.title || movie.name}</h2>
+            <p className={css.user_score}>
               User score: {Math.round(movie.vote_average)}/10
             </p>
             <div className={css.overview}>
@@ -76,37 +76,39 @@ export default function MovieDetails() {
               <h3>Genres</h3>
               <p>
                 {movie.genres.map(genre => (
-                  <span key={genre.id}>{genre.name}, </span>
+                  <span key={genre.id}>{genre.name}</span>
                 ))}
               </p>
             </div>
           </div>
         </div>
-        <div className={css.additionaInfo}>
-          <p className={css.castAndReviewsTitle}>Additional information</p>
-          <ul>
+        <hr />
+        <div className={css.additional_info}>
+          <p className={css.cast_reviews_title}>Additional information</p>
+          <ul className={css.add_info_list}>
             <li>
-              <NavLink className={css.navLink} to="cast">
+              <NavLink className={css.nav_link} to="cast">
                 Cast
               </NavLink>
             </li>
             <li>
-              <NavLink className={css.navLink} to="reviews">
+              <NavLink className={css.nav_link} to="reviews">
                 Reviews
               </NavLink>
             </li>
           </ul>
         </div>
+        <hr />
         <Suspense
           fallback={
             <div className={css.loading_block}>
               <Loader></Loader>
             </div>
-          }
+          }movie dat
         >
           <Outlet />
         </Suspense>
-      </main>
+      </div>
     );
   }
 }

@@ -43,6 +43,13 @@
 
 /*! ---- after adding photo ---- */
 
+.home_container{
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
 .loading_block{
     margin: 0 auto;
     display: flex;
@@ -57,11 +64,13 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    margin: 0;
 }
 
 .movie_list{
     list-style: none;
     padding: 0;
+    margin: 0;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

@@ -18,7 +18,6 @@ export default function SearchBar({ onSubmit }) {
     <form onSubmit={handleFormSubmit} className={css.form}>
       <input
         type="text"
-        value={query}
         onChange={e =>
           setSearchParams(
             e.currentTarget.value !== '' ? { query: e.currentTarget.value } : {}

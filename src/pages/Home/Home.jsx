@@ -38,7 +38,7 @@ export default function Home() {
 
   if (status === 'resolved') {
     return (
-      <>
+      <div className={css.home_container}>
         <h3 className={css.home_title}>Trending today</h3>
         <ul className={css.movie_list}>
           {movies.map(movie => (
@@ -65,7 +65,7 @@ export default function Home() {
             </li>
           ))}
         </ul>
-      </>
+      </div>
     );
   }
 
