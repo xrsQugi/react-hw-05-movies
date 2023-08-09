@@ -1,0 +1,40 @@
+.loading_block{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.no_reviews{
+    color: #171717;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    transition: all .1s ease-in-out;
+    margin: 0;
+}
+
+.review_list{
+    list-style: circle;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.review_author, .review_content{
+    color: #171717;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    transition: all .1s ease-in-out;
+    margin: 0;
+}
+
+
+.review_author{
+    font-weight: 700;
+}
